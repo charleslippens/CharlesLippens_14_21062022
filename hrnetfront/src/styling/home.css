@@ -1,0 +1,47 @@
+.home-name {
+	color: #444;
+	font-size: 2.2rem;
+	font-weight: bolder;
+}
+.home-form a {
+	text-decoration: none;
+	color: black;
+}
+
+.home-form {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.home-header {
+	width: 25%;
+	margin: auto;
+}
+
+.home-link {
+	margin: 0.5rem auto;
+	width: 13rem;
+	padding: 0.5rem;
+	background-color: #444444;
+	border-radius: 0.5rem;
+}
+.test-modal {
+	width: 50vw;
+	height: 50vh;
+	margin: auto;
+	text-align: center;
+	background-color: white;
+}
+.sub {
+	width: 12rem;
+	margin-top: 16.5rem;
+	padding: 1.5rem;
+	border-radius: 2rem;
+	background-color: white;
+}
+
+@media (max-width: 760px) {
+	.home-header {
+		width: 100%;
+	}
+}
