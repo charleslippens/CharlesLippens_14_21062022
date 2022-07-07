@@ -2,18 +2,18 @@
 	background-color: #879d2c;
 	margin: 0 auto;
 	width: 100%;
-	height: 9vh;
+	height: 5vh;
 }
 
 .footer-logo {
-	height: 10vh;
+	height: 5vh;
 }
 
 .footer-copy {
 	margin-left: 1rem;
 	color: black;
 	font-weight: bold;
-	margin: 3rem auto;
+	margin: 1rem auto;
 }
 .footer-m {
 	width: auto;
