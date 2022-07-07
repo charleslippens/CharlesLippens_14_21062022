@@ -8,22 +8,26 @@
 	color: #444444;
 }
 .header h1 {
-	margin: 5rem 20% 0 0;
+	margin: 5rem 0% 0 20rem;
 }
 
-@media (max-width: 575px) {
-	.header {
-		width: 98%;
-		display: block;
-		margin: auto;
-		padding: auto;
+.logo {
+	margin-top: 3%;
+	transition: 0.4s;
+	margin-left: 30%;
+}
+
+@keyframes logo {
+	from {
+		transform: rotate(0deg);
 	}
-	.header-img {
-		width: 70%;
-		margin: auto;
+
+	to {
+		transform: rotate(360deg);
 	}
-	.header h1 {
-		width: 100%;
-		margin: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+	.logo {
+		animation: logo infinite 40s linear;
 	}
 }

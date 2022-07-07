@@ -1,0 +1,67 @@
+form {
+	border: 1rem inset #879d2c;
+	border-radius: 1rem;
+	padding: 0.5rem 2rem 2rem 2rem;
+	background-color: #c2c27da9;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	margin: auto auto 3rem auto;
+}
+.form-desc {
+	color: #444444;
+	font-size: 1.1rem;
+	font-weight: bold;
+	background-color: #d5db99;
+	border: 0.5rem inset #d5db99;
+	text-align: center;
+}
+
+.label {
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding-bottom: 0.3rem;
+}
+
+.label-zipcode {
+	position: absolute;
+	width: 84%;
+	bottom: 0.3rem;
+	margin: auto;
+	padding-left: 1.4rem;
+}
+.label input {
+	height: 1.5rem;
+}
+.label select {
+	height: 2.4rem;
+	background-color: #879d2c;
+	font-weight: bold;
+	border-radius: 0.2rem;
+}
+.label p {
+	margin: 0.5rem 0 0.2rem 0;
+	text-align: left;
+	color: black;
+}
+.address {
+	width: 85%;
+	border: solid 1.9px #6c8312;
+	border-radius: 0.4rem;
+	padding: 0.2rem 0.2rem 4rem 0.2rem;
+	margin: 1.5rem auto;
+	height: 15rem;
+	position: relative;
+}
+
+.submit {
+	width: 5rem;
+	height: 2rem;
+	margin: 1rem auto 0;
+	background-color: #687e0d;
+	border-radius: 0.5rem;
+	padding-bottom: 1.6rem;
+	padding-top: 0.6rem;
+}

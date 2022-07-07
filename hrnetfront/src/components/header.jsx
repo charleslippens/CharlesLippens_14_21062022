@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logo2.png";
 
 import "../styling/header.css";
-import logo from "../assets/logo_hrnet.png";
 
 function Header() {
 	return (
@@ -12,7 +12,9 @@ function Header() {
 				</Link>
 			</div>
 			<h1>
-				<span className="wealth-name">WealthHealth </span> RH
+				<span className="wealth-name">Wealth Health HRNet</span>
+				<br />
+				Your dynamic App to manage HR
 			</h1>
 		</div>
 	);
