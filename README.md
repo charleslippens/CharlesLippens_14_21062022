@@ -15,7 +15,7 @@
 
 ## 1.2 Clone or download P13 repository
 
-Clone the P14 repository CharlesLippens_13_27042022 (containing backend+frontend) : https://github.com/charleslippens/CharlesLippens_14_21062022.git or click on Code => download ZIP
+Clone the P14 repository CharlesLippens_14_21062022 (containing backend+frontend) : https://github.com/charleslippens/CharlesLippens_14_21062022.git or click on Code => download ZIP
 
 ## 1.4 Install - Frontend React Application
 
