@@ -1,9 +1,10 @@
 import Footer from "../components/footer.jsx";
+import "../styling/employees.css";
 
 function EmployeeList() {
 	return (
 		<main>
-			<div id="employee" className="container">
+			<div className="employees-link">
 				<a href="/">Home</a>
 			</div>
 			<Footer />

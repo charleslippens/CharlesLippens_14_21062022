@@ -1,6 +1,6 @@
 import Footer from "../components/footer.jsx";
 import { Link } from "react-router-dom";
-import "../styling/home.css";
+import "../styling/create-employees.css";
 import Form from "../components/form.jsx";
 
 function Home() {
