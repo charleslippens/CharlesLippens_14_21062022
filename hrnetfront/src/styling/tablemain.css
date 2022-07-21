@@ -6,3 +6,13 @@
 	margin: 1rem auto;
 	text-align: center;
 }
+.table-title {
+	width: 20rem;
+	margin: 1rem auto;
+	text-align: center;
+	background-color: #d5db99;
+	border: 0.5rem inset #d5db99;
+	color: #444;
+	font-size: 1.4rem;
+	font-weight: bolder;
+}

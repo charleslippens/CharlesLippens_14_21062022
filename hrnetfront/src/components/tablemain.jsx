@@ -4,6 +4,7 @@ import "../styling/tablemain.css";
 export default function Table({ labels, handleSort }) {
 	return (
 		<table className="table_main">
+			<caption className="table-title">Current Employees</caption>
 			<thead>
 				<tr>
 					{labels.map((label) => (
