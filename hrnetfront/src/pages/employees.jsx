@@ -1,17 +1,19 @@
 import Footer from "../components/footer.jsx";
 import "../styling/employees.css";
-import Table from "../components/tablemain.jsx";
-import labels from "../datas/labels";
+import labels from "../datas/labels.jsx";
+import TableTest from "../components/tablemain.jsx";
 
 function EmployeeList() {
+	const employees = JSON.parse(localStorage.getItem("employees"));
+	console.log(employees);
 	return (
-		<main>
-			<Table labels={labels} />
+		<div className="employees">
+			<TableTest labels={labels} data={employees} />
 			<div className="employees-link">
 				<a href="/">Home</a>
 			</div>
 			<Footer />
-		</main>
+		</div>
 	);
 }
 

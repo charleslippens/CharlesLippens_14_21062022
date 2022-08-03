@@ -16,3 +16,33 @@
 	font-size: 1.4rem;
 	font-weight: bolder;
 }
+
+th,
+td {
+	color: black;
+	padding: 0.3rem;
+	font-size: 0.9rem;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #e0e1d5;
+	border-bottom: solid 0.05rem #989996;
+}
+table tbody tr:nth-child(even) {
+	background-color: #daddc8;
+	border-bottom: solid 0.05rem #989996;
+}
+
+table tbody tr:hover {
+	background-color: #687e0d;
+}
+
+.myTable {
+	position: relative;
+	margin-top: 5rem;
+}
+
+.nodata {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
