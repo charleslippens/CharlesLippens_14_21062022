@@ -66,13 +66,13 @@ const Form = () => {
 		if (errorCounter > 0) {
 			return;
 		} else {
-			const employees = JSON.parse(localStorage.getItem("employees")) || [];
+			let employees = JSON.parse(localStorage.getItem("employees")) || [];
 			const employee = {
 				firstName: firstName,
 				lastName: lastName,
-				dateOfBirth: dateOfBirth,
 				startDate: startDate,
 				department: department,
+				dateOfBirth: dateOfBirth,
 				street: street,
 				city: city,
 				state: countryState,

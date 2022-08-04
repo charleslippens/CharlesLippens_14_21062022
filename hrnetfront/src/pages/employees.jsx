@@ -4,8 +4,9 @@ import labels from "../datas/labels.jsx";
 import TableTest from "../components/tablemain.jsx";
 
 function EmployeeList() {
-	const employees = JSON.parse(localStorage.getItem("employees"));
+	const employees = JSON.parse(localStorage.getItem("employees")) || [];
 	console.log(employees);
+
 	return (
 		<div className="employees">
 			<TableTest labels={labels} data={employees} />

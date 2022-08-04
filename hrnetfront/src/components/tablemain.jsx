@@ -1,6 +1,6 @@
 import "../styling/tablemain.css";
 
-export default function Table({ labels, data, sortedData }) {
+export default function Table({ labels, data }) {
 	const genID = () => {
 		return "_" + Math.random().toString(36).substr(2, 9);
 	};
@@ -19,6 +19,13 @@ export default function Table({ labels, data, sortedData }) {
 				</tr>
 			</thead>
 			<tbody>
+				{data.length === 0 && (
+					<tr>
+						<td className="nodata" colSpan={labels.length}>
+							No data available in table
+						</td>
+					</tr>
+				)}
 				{/* Affichage la page actuelle */}
 				{data.map((element) => {
 					return (
