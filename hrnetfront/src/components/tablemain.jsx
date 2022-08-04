@@ -22,7 +22,7 @@ export default function Table({ labels, data }) {
 				{data.length === 0 && (
 					<tr>
 						<td className="nodata" colSpan={labels.length}>
-							No data available in table
+							No data
 						</td>
 					</tr>
 				)}
