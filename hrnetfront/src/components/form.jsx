@@ -80,6 +80,7 @@ const Form = () => {
 			};
 			e.target.reset();
 			employees.push(employee);
+			localStorage.setItem("employees", JSON.stringify(employees));
 			OpenModal();
 		}
 	};
