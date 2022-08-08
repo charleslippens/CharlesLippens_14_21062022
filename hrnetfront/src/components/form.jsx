@@ -111,6 +111,8 @@ const Form = () => {
 					value={dateOfBirth}
 					setIn={setDateOfBirth}
 					type="date"
+					min="1960-01-01"
+					max="2022-12-31"
 				/>
 				<div ref={errBirthDate}></div>
 				<Input
@@ -120,6 +122,8 @@ const Form = () => {
 					value={startDate}
 					setIn={setStartDate}
 					type="date"
+					min="1960-01-01"
+					max="2022-12-31"
 				/>
 				<div ref={errStartDate}></div>
 				<div className="address">

@@ -1,4 +1,4 @@
-function Input({ labelTitle, type, name, value, setIn, className }) {
+function Input({ labelTitle, type, name, value, setIn, className, min, max }) {
 	return (
 		<label className="label" htmlFor={name}>
 			<p>{labelTitle}</p>
@@ -7,6 +7,8 @@ function Input({ labelTitle, type, name, value, setIn, className }) {
 				type={type}
 				name={name}
 				value={value}
+				min={min}
+				max={max}
 				required
 				onChange={(e) => {
 					setIn(e.target.value);
