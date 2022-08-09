@@ -1,7 +1,7 @@
 import Footer from "../components/footer.jsx";
 import "../styling/employees.css";
 import labels from "../datas/labels.jsx";
-import TableTest from "../components/table.jsx";
+import TableMain from "../components/tablemain.jsx";
 
 function EmployeeList() {
 	const employees = JSON.parse(localStorage.getItem("employees")) || [];
@@ -9,7 +9,7 @@ function EmployeeList() {
 
 	return (
 		<div className="employees">
-			<TableTest labels={labels} data={employees} />
+			<TableMain labels={labels} data={employees} />
 			<div className="employees-link">
 				<a href="/">Home</a>
 			</div>

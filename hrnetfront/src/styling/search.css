@@ -1,0 +1,35 @@
+.table-search {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: -5rem;
+}
+
+.table-search-2 {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	height: 2rem;
+	background-color: #879d2c;
+	color: black;
+	padding: 0.2rem;
+	border-radius: 0.2rem;
+	margin-right: 3%;
+}
+.table-search input {
+	width: 8rem;
+	margin-left: 1rem;
+	padding-left: 0.2rem;
+	border-radius: 0.2rem;
+	background-color: rgb(206, 206, 128);
+	font-size: 1rem;
+}
+.table-search label {
+	padding: 0.5rem;
+	margin: auto 0;
+}
+
+.Tab {
+	position: relative;
+	margin-top: 10rem;
+}

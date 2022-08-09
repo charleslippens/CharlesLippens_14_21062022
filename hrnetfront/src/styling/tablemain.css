@@ -1,8 +1,8 @@
-.table_main {
+.table-main {
 	table-layout: fixed;
 	width: 95%;
 	border-collapse: collapse;
-	border: 0.5rem inset #687e0d;
+	border: 0.5rem inset #879d2c;
 	margin: 1rem auto;
 	text-align: center;
 }
@@ -34,12 +34,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr:hover {
-	background-color: #687e0d;
-}
-
-.myTable {
-	position: relative;
-	margin-top: 5rem;
+	background-color: #879d2c;
 }
 
 .nodata {

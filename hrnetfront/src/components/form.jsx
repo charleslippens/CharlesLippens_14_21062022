@@ -29,6 +29,14 @@ const Form = () => {
 	const errStateName = useRef(null);
 	const errZipCode = useRef(null);
 	const errDepartment = useRef(null);
+	const zipRegex = /^\d{5}$|^\d{5}$/;
+
+	const dateTable = (date) => {
+		const month = date.getMonth() + 1;
+		const day = date.getDate();
+		const year = date.getUTCFullYear();
+		return `${month}/${day}/${year}`.toString();
+	};
 	const handleSub = (e) => {
 		e.preventDefault();
 		let errorCounter = 0;
@@ -56,13 +64,26 @@ const Form = () => {
 		} else {
 			errCity.current.innerText = ` `;
 		}
-
-		if (typeof zipCode !== "number" && zipCode.toString().length !== 5) {
+		console.log(countryState);
+		if (statesData.some((element) => element.value === countryState)) {
+			errStateName.current.innerText = `State is required.`;
+			errorCounter++;
+		} else {
+			errStateName.current.innerText = ` `;
+		}
+		if (departmentsData.some((element) => element.value === department)) {
+			errDepartment.current.innerText = `Department is required.`;
+			errorCounter++;
+		} else {
+			errDepartment.current.innerText = ` `;
+		}
+		if (!zipRegex.test(zipCode)) {
 			errZipCode.current.innerText = `Correct Zip Code is required.`;
 			errorCounter++;
 		} else {
 			errZipCode.current.innerText = ` `;
 		}
+
 		if (errorCounter > 0) {
 			return;
 		} else {
@@ -70,18 +91,25 @@ const Form = () => {
 			const employee = {
 				firstName: firstName,
 				lastName: lastName,
-				startDate: startDate,
+				startDate: dateTable(new Date(startDate)),
 				department: department,
-				dateOfBirth: dateOfBirth,
+				dateOfBirth: dateTable(new Date(dateOfBirth)),
 				street: street,
 				city: city,
 				state: countryState,
 				zipCode: zipCode,
 			};
-			e.target.reset();
 			employees.push(employee);
 			localStorage.setItem("employees", JSON.stringify(employees));
 			OpenModal();
+			setFirstName("");
+			setLastName("");
+			setFirstName("");
+			setZipCode("");
+			setStreet("");
+			setDateOfBirth("");
+			setCity("");
+			setStartDate("");
 		}
 	};
 

@@ -34,7 +34,7 @@
 	padding: 1.5rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 765px) {
 	.home-header {
 		width: 100%;
 	}
