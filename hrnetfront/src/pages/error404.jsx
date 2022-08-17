@@ -2,6 +2,10 @@ import Footer from "../components/footer.jsx";
 import { Link } from "react-router-dom";
 import "../styling/error.css";
 
+/**
+ * Page erreur 404: page doesn't exist (url error)
+ * @returns {any}
+ */
 function Error() {
 	return (
 		<div className="employees">

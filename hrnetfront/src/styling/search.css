@@ -1,7 +1,7 @@
 .table-search {
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	margin-bottom: -5rem;
 }
 
@@ -9,11 +9,11 @@
 	display: flex;
 	flex-direction: row;
 	width: auto;
-	height: 2rem;
+	height: 2.5rem;
 	background-color: #879d2c;
 	color: black;
-	padding: 0.2rem;
-	border-radius: 0.2rem;
+	padding: 0.5rem;
+	border-radius: 0.7rem;
 	margin-right: 3%;
 }
 .table-search input {
@@ -29,7 +29,42 @@
 	margin: auto 0;
 }
 
+.table-foot {
+	width: 97%;
+	display: flex;
+	justify-content: space-between;
+	color: black;
+}
+.table-foot-p {
+	margin-left: 3rem;
+	font-weight: bold;
+}
+
 .Tab {
 	position: relative;
 	margin-top: 10rem;
+}
+.table-entry-1 {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	height: 2.5rem;
+	background-color: #879d2c;
+	color: black;
+	padding: 0.5rem;
+	border-radius: 0.7rem;
+	margin-left: 3%;
+}
+.table-entry-1 select {
+	padding: 0.5rem;
+	margin: auto 1rem;
+	background-color: rgb(206, 206, 128);
+	font-size: 1rem;
+	font-weight: bolder;
+	border-radius: 0.5rem;
+}
+.table-entry-1 label,
+.table-entry-1 span {
+	padding: 0.5rem;
+	margin: auto 0;
 }

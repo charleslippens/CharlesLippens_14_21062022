@@ -5,6 +5,10 @@ import Home from "../pages/create-employees.jsx";
 import Employees from "../pages/employees.jsx";
 import Error from "../pages/error404.jsx";
 
+/**
+ * Router: browsing navigation for header, pages: home, employees, error
+ * @returns {any}
+ */
 function Router() {
 	return (
 		<>

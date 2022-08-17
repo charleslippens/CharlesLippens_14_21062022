@@ -3,6 +3,10 @@ import logo from "../assets/logo2.png";
 
 import "../styling/header.css";
 
+/**
+ * Displaying all elements in header
+ * @returns {any}
+ */
 function Header() {
 	return (
 		<div className="header">

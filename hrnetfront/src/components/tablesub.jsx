@@ -1,5 +1,13 @@
 import "../styling/tablemain.css";
+import PropTypes from "prop-types";
 
+/**
+ * Create everything inside table, getting and displays datas
+ * @param {array} {dataSort
+ * @param {array} labels
+ * @param {array} data}
+ * @returns {table}
+ */
 function TableData({ dataSort, labels, data }) {
 	const genID = () => {
 		return "_" + Math.random().toString(36).substr(2, 9);
@@ -41,3 +49,8 @@ function TableData({ dataSort, labels, data }) {
 }
 
 export default TableData;
+TableData.propTypes = {
+	data: PropTypes.array.isRequired,
+	labels: PropTypes.array.isRequired,
+	dataSort: PropTypes.array.isRequired,
+};

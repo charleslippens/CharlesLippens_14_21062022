@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "jsdoc": "^3.6.11",
+    "prop-types": "^15.8.1",
     "react_customizable_modal_boilerplate_clippens": "^0.3.3"
   }
 }

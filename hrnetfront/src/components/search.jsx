@@ -1,8 +1,11 @@
-import React from "react";
-
-// Cherche dans toutes les entrées
-
-export default function Search({ data, DisplayedData, IsSearch }) {
+/**
+ * Search in every entries of table
+ * @param {any} {data
+ * @param {any} DisplayedData
+ * @param {any} IsSearch}
+ * @returns {any}
+ */
+function Search({ data, DisplayedData, IsSearch }) {
 	const normalizeTxt = (txt) => {
 		return txt
 			.toLowerCase()
@@ -35,3 +38,4 @@ export default function Search({ data, DisplayedData, IsSearch }) {
 		</div>
 	);
 }
+export default Search;

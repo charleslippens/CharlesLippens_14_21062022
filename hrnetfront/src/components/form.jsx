@@ -7,6 +7,10 @@ import Select from "./select.jsx";
 import Input from "./input.jsx";
 import { Modal } from "react_customizable_modal_boilerplate_clippens";
 
+/**
+ * Displaying form: getting form working and submitting
+ * @returns {any}
+ */
 const Form = () => {
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
@@ -119,36 +123,36 @@ const Form = () => {
 				<div className="form-desc">Create Employee</div>
 				<Input
 					name="firstname"
-					labelTitle="First Name:"
+					Title="First Name:"
 					value={firstName}
-					setIn={setFirstName}
+					Set={setFirstName}
 					type="text"
 				/>
 				<div ref={errFirstName}></div>
 				<Input
 					name="lastname"
-					labelTitle="Last Name:"
+					Title="Last Name:"
 					value={lastName}
-					setIn={setLastName}
+					Set={setLastName}
 					type="text"
 				/>
 				<div ref={errLastName}></div>
 				<Input
-					labelTitle="Birth Date:"
+					Title="Birth Date:"
 					name="lastname"
 					value={dateOfBirth}
-					setIn={setDateOfBirth}
+					Set={setDateOfBirth}
 					type="date"
 					min="1960-01-01"
 					max="2022-12-31"
 				/>
 				<div ref={errBirthDate}></div>
 				<Input
-					labelTitle="Start Date:"
+					Title="Start Date:"
 					placeholder="Select a start date"
 					name="lastname"
 					value={startDate}
-					setIn={setStartDate}
+					Set={setStartDate}
 					type="date"
 					min="1960-01-01"
 					max="2022-12-31"
@@ -159,41 +163,35 @@ const Form = () => {
 					<Input
 						type="text"
 						name="street"
-						labelTitle="Street:"
+						Title="Street:"
 						value={street}
-						setIn={setStreet}
+						Set={setStreet}
 					/>
 					<div ref={errStreet}></div>
-					<Input
-						type="text"
-						name="city"
-						labelTitle="City:"
-						value={city}
-						setIn={setCity}
-					/>
+					<Input type="text" name="city" Title="City:" value={city} Set={setCity} />
 					<div ref={errCity}></div>
 					<Select
 						name="state"
-						labelTitle="State:"
+						Title="State:"
 						value={countryState}
-						setElement={setCountryState}
+						setSelect={setCountryState}
 						options={statesData}
 					/>
 					<div ref={errStateName}></div>
 					<Input
 						type="number"
 						name="zipcode"
-						labelTitle="Zipcode:"
+						Title="Zipcode:"
 						value={zipCode}
-						setIn={setZipCode}
+						Set={setZipCode}
 					/>
 					<div ref={errZipCode}></div>
 				</div>
 				<Select
 					name="department"
-					labelTitle="Department:"
+					Title="Department:"
 					value={department}
-					setElement={setDepartment}
+					setSelect={setDepartment}
 					options={departmentsData}
 				/>
 				<div ref={errDepartment}></div>

@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "../styling/create-employees.css";
 import Form from "../components/form.jsx";
 
+/**
+ * Create employees page: header, button, form, footer
+ * @returns {any}
+ */
 function Home() {
 	return (
 		<div className="home">
