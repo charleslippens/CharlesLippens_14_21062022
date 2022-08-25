@@ -7,7 +7,9 @@ import Form from "../components/form.jsx";
  * Create employees page: header, button, form, footer
  * @returns {any}
  */
-function Home() {
+function Home(props) {
+	const addEmployee = props.setCurrentList;
+
 	return (
 		<div className="home">
 			<div className="home-form">
@@ -18,7 +20,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<Form />
+			<Form setCurrentList={addEmployee} />
 			<Footer />
 		</div>
 	);

@@ -6,12 +6,13 @@ import "../styling/form.css";
 import Select from "./select.jsx";
 import Input from "./input.jsx";
 import { Modal } from "react_customizable_modal_boilerplate_clippens";
-
+//import { collection, addDoc } from "firebase/firestore/lite";
+//import { db } from "../services/firebase.jsx";
 /**
  * Displaying form: getting form working and submitting
  * @returns {any}
  */
-const Form = () => {
+const Form = (props) => {
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [dateOfBirth, setDateOfBirth] = useState("");
@@ -34,6 +35,7 @@ const Form = () => {
 	const errZipCode = useRef(null);
 	const errDepartment = useRef(null);
 	const zipRegex = /^\d{5}$|^\d{5}$/;
+	const addEmployee = props.setCurrentList;
 
 	const dateTable = (date) => {
 		const month = date.getMonth() + 1;
@@ -91,7 +93,8 @@ const Form = () => {
 		if (errorCounter > 0) {
 			return;
 		} else {
-			let employees = JSON.parse(localStorage.getItem("employees")) || [];
+			//const employees = collection(db, "Employees-list");
+			//let employees = JSON.parse(localStorage.getItem("employees")) || [];
 			const employee = {
 				firstName: firstName,
 				lastName: lastName,
@@ -103,8 +106,10 @@ const Form = () => {
 				state: countryState,
 				zipCode: zipCode,
 			};
-			employees.push(employee);
-			localStorage.setItem("employees", JSON.stringify(employees));
+			addEmployee(employee);
+			console.log(employee);
+			//addDoc(employees, employee);
+			//	localStorage.setItem("employees", JSON.stringify(employees));
 			OpenModal();
 			setFirstName("");
 			setLastName("");

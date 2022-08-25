@@ -68,3 +68,29 @@
 	padding: 0.5rem;
 	margin: auto 0;
 }
+.page {
+	display: flex;
+	flex-direction: row;
+}
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+}
+.pagination p {
+	font-weight: bold;
+}
+
+.numb {
+	background-color: #879d2c;
+	border-radius: 10%;
+	color: black;
+	margin: 0 0.5rem;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+.numb-active {
+	background: #879d2c;
+}
+.numb-disabled {
+	display: none;
+}

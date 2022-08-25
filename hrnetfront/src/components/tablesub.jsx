@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  * @param {array} data}
  * @returns {table}
  */
-function TableData({ dataSort, labels, data }) {
+function TableData({ minimumRows, maximumRows, dataSort, labels, data }) {
 	const genID = () => {
 		return "_" + Math.random().toString(36).substr(2, 9);
 	};
@@ -34,14 +34,24 @@ function TableData({ dataSort, labels, data }) {
 						</td>
 					</tr>
 				)}
-				{data.map((element) => {
-					return (
-						<tr key={genID()}>
-							{Object.values(element).map((value) => (
-								<td key={genID()}>{value}</td>
-							))}
-						</tr>
-					);
+				{data.map((element, index) => {
+					if (index + 1 >= minimumRows && index < maximumRows) {
+						return (
+							<tr key={genID()} className="dtb-table-row">
+								{Object.values(element).map((value, j) => (
+									<td
+										key={genID()}
+										className={
+											j === 0 ? "dtb-table-cell first-cell" : "dtb-table-cell"
+										}
+									>
+										{value}
+									</td>
+								))}
+							</tr>
+						);
+					}
+					return null;
 				})}
 			</tbody>
 		</table>
@@ -53,4 +63,6 @@ TableData.propTypes = {
 	data: PropTypes.array.isRequired,
 	labels: PropTypes.array.isRequired,
 	dataSort: PropTypes.array.isRequired,
+	minimumRows: PropTypes.number.isRequired,
+	maximumRows: PropTypes.number.isRequired,
 };

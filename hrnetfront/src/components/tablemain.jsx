@@ -2,6 +2,8 @@ import TableData from "./tablesub.jsx";
 import TableShowing from "./showing.jsx";
 import Search from "./search.jsx";
 import Entry from "./entries.jsx";
+import Pagination from "./page.jsx";
+
 import { useState } from "react";
 import "../styling/search.css";
 import PropTypes from "prop-types";
@@ -18,7 +20,7 @@ function TableMain({ data, labels }) {
 	const [isSearch, setIsSearch] = useState(false);
 	const [dataSort, setdataSort] = useState(initState);
 	//showing/entries
-	const [postPage, setPostPerPage] = useState(5);
+	const [postPage, setPostPerPage] = useState(10);
 	const [current, setCurrentPage] = useState(1);
 	console.log(postPage);
 	// min, max for normal and filtered
@@ -31,7 +33,7 @@ function TableMain({ data, labels }) {
 		setPostPerPage(parseInt(evt.target.value));
 		setCurrentPage(1);
 	};
-	console.log(setCurrentPage);
+	console.log(dataSort);
 
 	console.log(EntryChange);
 	return (
@@ -44,8 +46,8 @@ function TableMain({ data, labels }) {
 				labels={labels}
 				data={dataSort}
 				dataSort={dataSort}
-				minRows={minimumRows}
-				maxRows={maximumRows}
+				minimumRows={minimumRows}
+				maximumRows={maximumRows}
 			/>
 			<div className="table-foot">
 				<TableShowing
@@ -56,6 +58,12 @@ function TableMain({ data, labels }) {
 					minimumRows={minimumRows}
 					maximumRows={maximumRows}
 					totalEntriesShow={dataSort.length}
+				/>
+				<Pagination
+					total={dataSort.length}
+					displayedEntry={postPage}
+					Click={setCurrentPage}
+					current={current}
 				/>
 			</div>
 		</div>
