@@ -5,6 +5,8 @@ import Home from "../pages/create-employees.jsx";
 import Employees from "../pages/employees.jsx";
 import Error from "../pages/error404.jsx";
 import { useState } from "react";
+import firebase from "./firebase.jsx";
+import { FirebaseContext } from "../services/firebase_index.jsx";
 
 /**
  * Router: browsing navigation for header, pages: home, employees, error
@@ -23,14 +25,16 @@ function Router() {
 		<>
 			<BrowserRouter>
 				<Header />
-				<Routes>
-					<Route index element={<Home setCurrentList={addEmployee} />} />
-					<Route
-						path="employees"
-						element={<Employees updateNewEmployee={currentList} />}
-					/>
-					<Route path="*" element={<Error />} />
-				</Routes>
+				<FirebaseContext.Provider value={{ firebase }}>
+					<Routes>
+						<Route index element={<Home setCurrentList={addEmployee} />} />
+						<Route
+							path="employees"
+							element={<Employees updateNewEmployee={currentList} />}
+						/>
+						<Route path="*" element={<Error />} />
+					</Routes>
+				</FirebaseContext.Provider>
 			</BrowserRouter>
 		</>
 	);

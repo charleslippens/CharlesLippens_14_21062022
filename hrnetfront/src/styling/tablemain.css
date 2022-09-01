@@ -37,7 +37,19 @@ table tbody tr:hover {
 	background-color: #879d2c;
 }
 
-.nodata {
+.no-data {
 	font-size: 1.2rem;
 	font-weight: bold;
+}
+
+.downactive:after {
+	content: " \2B07";
+	display: inline-block;
+	font-size: 1.2rem;
+}
+
+.upactive:after {
+	content: "\2B06";
+	display: inline-block;
+	font-size: 1.2rem;
 }

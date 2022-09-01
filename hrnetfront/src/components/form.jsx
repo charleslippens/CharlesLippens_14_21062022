@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { FirebaseContext } from "../services/firebase_index.jsx";
 
 import statesData from "../datas/statesData.jsx";
 import departmentsData from "../datas/departmentData.jsx";
@@ -13,6 +14,8 @@ import { Modal } from "react_customizable_modal_boilerplate_clippens";
  * @returns {any}
  */
 const Form = (props) => {
+	const { firebase } = useContext(FirebaseContext);
+
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [dateOfBirth, setDateOfBirth] = useState("");
@@ -22,9 +25,9 @@ const Form = (props) => {
 	const [city, setCity] = useState("");
 	const [countryState, setCountryState] = useState(statesData[0].value);
 	const [zipCode, setZipCode] = useState("");
-	const [openModale, setOpenModal] = useState(false);
-	const OpenModal = () => setOpenModal(true);
-	const CloseModal = () => setOpenModal(false);
+	const [openModale, setOpenModale] = useState(false);
+	const OpenModale = () => setOpenModale(true);
+	const CloseModale = () => setOpenModale(false);
 	const errFirstName = useRef(null);
 	const errLastName = useRef(null);
 	const errStartDate = useRef(null);
@@ -43,6 +46,7 @@ const Form = (props) => {
 		const year = date.getUTCFullYear();
 		return `${month}/${day}/${year}`.toString();
 	};
+
 	const handleSub = (e) => {
 		e.preventDefault();
 		let errorCounter = 0;
@@ -106,11 +110,12 @@ const Form = (props) => {
 				state: countryState,
 				zipCode: zipCode,
 			};
+			firebase.db.collection("employees").add(employee);
 			addEmployee(employee);
 			console.log(employee);
 			//addDoc(employees, employee);
 			//	localStorage.setItem("employees", JSON.stringify(employees));
-			OpenModal();
+			OpenModale();
 			setFirstName("");
 			setLastName("");
 			setFirstName("");
@@ -202,7 +207,7 @@ const Form = (props) => {
 				<div ref={errDepartment}></div>
 				<Input type="submit" name="submit" className="submit" value="Save" />
 			</form>
-			{openModale && <Modal close={CloseModal} text="Employee Created!" />}
+			{openModale && <Modal close={CloseModale} text="Employee Created!" />}
 		</>
 	);
 };

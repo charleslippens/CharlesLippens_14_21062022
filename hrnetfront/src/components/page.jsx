@@ -52,7 +52,7 @@ export default Pagination;
 
 Pagination.propTypes = {
 	current: PropTypes.number.isRequired,
-	totalEntries: PropTypes.number.isRequired,
-	displayedEntries: PropTypes.number.isRequired,
+	total: PropTypes.number.isRequired,
+	displayedEntry: PropTypes.number.isRequired,
 	Click: PropTypes.func.isRequired,
 };
