@@ -5,7 +5,7 @@ import Home from "../pages/create-employees.jsx";
 import Employees from "../pages/employees.jsx";
 import Error from "../pages/error404.jsx";
 import { useState } from "react";
-import firebase from "./firebasea.jsx";
+import firebase from "./firebase.jsx";
 import { FirebaseContext } from "../services/firebase_index.jsx";
 
 /**
