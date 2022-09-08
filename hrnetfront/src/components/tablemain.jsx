@@ -7,6 +7,7 @@ import Pagination from "./page.jsx";
 import { useState } from "react";
 import "../styling/search.css";
 import PropTypes from "prop-types";
+import { normalizeTxt } from "../services/utils.jsx";
 
 /**
  * Creating main table with all elements and functionalities
@@ -19,13 +20,7 @@ function TableMain({ data, labels }) {
 		col: "",
 		isDescending: true,
 	});
-	const normalizeTxt = (txt) => {
-		return txt
-			.toLowerCase()
-			.normalize("NFD")
-			.replace(/[\u0300-\u036f]/g, "")
-			.trim();
-	};
+
 	// Setsort by ascending or descending
 	const Sort = (label) => {
 		if (sortedCol.col === label) {

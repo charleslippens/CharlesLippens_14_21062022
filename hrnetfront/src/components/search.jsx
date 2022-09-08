@@ -1,3 +1,5 @@
+import { normalizeTxt } from "../services/utils.jsx";
+
 /**
  * Search in every entries of table
  * @param {any} {data
@@ -6,14 +8,6 @@
  * @returns {any}
  */
 function Search({ data, DisplayedData, IsSearch }) {
-	const normalizeTxt = (txt) => {
-		return txt
-			.toLowerCase()
-			.normalize("NFD")
-			.replace(/[\u0300-\u036f]/g, "")
-			.trim();
-	};
-
 	const Search = (event) => {
 		const value = normalizeTxt(event.target.value);
 		if (value.length > 0) {
