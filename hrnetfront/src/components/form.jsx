@@ -1,5 +1,4 @@
-import { useState, useRef, useContext } from "react";
-import { FirebaseContext } from "../services/firebase_index.jsx";
+import { useState, useRef } from "react";
 
 import statesData from "../datas/statesData.jsx";
 import departmentsData from "../datas/departmentData.jsx";
@@ -14,8 +13,6 @@ import { Modal } from "react_customizable_modal_boilerplate_clippens";
  * @returns {any}
  */
 const Form = (props) => {
-	const { firebase } = useContext(FirebaseContext);
-
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [dateOfBirth, setDateOfBirth] = useState("");
@@ -110,7 +107,6 @@ const Form = (props) => {
 				state: countryState,
 				zipCode: zipCode,
 			};
-			firebase.db.collection("employees").add(employee);
 			addEmployee(employee);
 			console.log(employee);
 			//addDoc(employees, employee);
