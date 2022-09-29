@@ -3,7 +3,7 @@ import "../styling/employees.css";
 import labels from "../datas/labels.jsx";
 import TableMain from "../components/tablemain.jsx";
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 /**
  * Employees page: header, TableMain, footer

@@ -145,7 +145,7 @@ const Form = (props) => {
 				<div ref={errLastName}></div>
 				<Input
 					Title="Birth Date:"
-					name="lastname"
+					name="dateOfBirth"
 					value={dateOfBirth}
 					Set={setDateOfBirth}
 					type="date"
@@ -156,7 +156,7 @@ const Form = (props) => {
 				<Input
 					Title="Start Date:"
 					placeholder="Select a start date"
-					name="lastname"
+					name="startDate"
 					value={startDate}
 					Set={setStartDate}
 					type="date"

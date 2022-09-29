@@ -1,4 +1,4 @@
-import Select from "../../components/select.jsx";
+import Select from "../components/select.jsx";
 import { render, screen, fireEvent } from "@testing-library/react";
 
 const handler = jest.fn();

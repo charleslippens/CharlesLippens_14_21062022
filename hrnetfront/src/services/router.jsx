@@ -6,6 +6,7 @@ import React, { Suspense, lazy, useState } from "react";
 const Home = lazy(() => import("../pages/create-employees.jsx"));
 const Employees = lazy(() => import("../pages/employees.jsx"));
 const Error = lazy(() => import("../pages/error404.jsx"));
+
 /**
  * Router: browsing navigation for header, pages: home, employees, error
  * @returns {any}
