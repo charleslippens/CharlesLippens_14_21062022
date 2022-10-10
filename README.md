@@ -19,9 +19,9 @@ Clone the P14 repository CharlesLippens_14_21062022 (containing backend+frontend
 
 ## 1.4 Install - Frontend React Application
 
-Inside the frontend folder, install the packages/dependencies with command on terminal: `yarn install`
+Inside the frontend "/hrnetfront/src/"folder, install the packages/dependencies with command on terminal: `npm install` or `yarn install`
 
-Run the Frontend App with command on terminal on port 3000: `yarn start`
+Run the Frontend App with command on terminal on port 3000: `npm start` or `yarn start`
 
 
 
